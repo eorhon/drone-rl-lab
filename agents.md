@@ -161,3 +161,28 @@ Next focus:
 3. Isolation before complexity
 4. Reproducibility before novelty
 5. Discipline before motivation
+
+## Python Environment Discipline
+
+All research-related Python dependencies must be installed inside a virtual environment (venv).
+
+System Python must remain clean.
+
+Rules:
+
+- Never install research packages globally.
+- Always activate venv before running experiments.
+- Rebuild venv if dependency conflicts occur.
+- Log major dependency changes.
+- Maintain reproducibility via requirements.txt or pyproject.toml.
+
+Activation command:
+
+    cd ~/rl_lab
+    source venv/bin/activate
+
+Deactivation:
+
+    deactivate
+
+The virtual environment is part of research reproducibility.
