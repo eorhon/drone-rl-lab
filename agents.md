@@ -8,48 +8,57 @@ Independent Robotics & Reinforcement Learning Research Track
 This repository represents an independent research lab focused on:
 
 - Reinforcement Learning for robotic control
-- Drone-based simulation research (PX4)
+- Drone-based simulation research (PX4 SITL)
+- Adaptive control under dynamics mismatch
 - Sim-to-real robustness
-- Structured experimentation at research-grade rigor
 
 This work is:
 
 - Not affiliated with any university
 - Not tied to employer IP
-- Intended for capability expansion and research mastery
+- Intended for long-term capability growth
+- Structured toward publishable research
 
 Roles:
 
-- Human = Principal Investigator, System Architect, Experiment Designer
-- AI Tools = Software engineers, research assistants
-- Final intellectual authority = Human
+- Human = Principal Investigator, Architect, Experiment Designer
+- AI Tools = Software Engineers, Research Assistants
+- Final authority = Human
 
 ---
 
 ## 2. Long-Term Vision
 
-### Phase A — Infrastructure
-- Linux research environment
-- CUDA + PyTorch GPU
-- PX4 SITL + Gazebo stable
-- Modular RL experiment framework
+### Phase 1 — Infrastructure (Completed)
+- Ubuntu 24.04 dual boot
+- NVIDIA driver working
+- CUDA runtime verified
+- PyTorch GPU validated
+- Python venv isolated
+- GitHub SSH configured
 
-### Phase B — Publishable Research
-- Isolate meaningful RL research question
-- Reproducible experiments
-- Conference-level paper
+### Phase 2 — Research Foundation
+- Modular experiment framework
+- Reproducible RL training loop
+- Baseline controllers (classical + RL)
+- Controlled experiment protocol
 
-### Phase C — Advanced Research
+### Phase 3 — Publishable Research
+- Structured hypothesis-driven experiments
+- Ablation studies
+- Conference-level submission
+
+### Phase 4 — Advanced Direction
+- Implicit vs explicit adaptation comparison
+- Recurrent policies
 - Sim-to-real experiments
-- Domain randomization
-- Robust RL policies
-- Journal-level publication potential
+- Journal extension
 
 ---
 
 ## 3. Research Protocol (MANDATORY)
 
-Before writing ANY code, answer:
+Before writing any experiment code, define:
 
 1. What is the hypothesis?
 2. What is the measurable metric?
@@ -57,126 +66,24 @@ Before writing ANY code, answer:
 4. What variable am I isolating?
 5. What does failure mean?
 
-If these are not defined, work does not begin.
+If these are not written clearly → experiment does not begin.
+
+No uncontrolled tinkering.
 
 ---
 
-## 4. Initial Direction
+## 4. Python Environment Discipline
 
-Primary focus:
-
-RL for drone control in PX4 simulation.
-
-Why drone:
-- Mature SITL ecosystem
-- Hardware access possible
-- Clear sim-to-real path
-- Faster iteration than quadrupeds
-
----
-
-## 5. Time Discipline
-
-Available time:
-- ~1 hour weekdays
-- 3–4 hours weekend
-- ~8–10 hours/week total
-
-Principles:
-- Slow and steady
-- No burnout
-- Sustainable long-term growth
-
----
-
-## 6. Intellectual Boundaries
-
-Restricted topics (due to employer overlap):
-- Interception systems
-- Classified navigation systems
-- Proprietary architectures
-
-All independent work must be:
-- Built from scratch
-- Clearly separable
-- Safe for public release
-
----
-
-## 7. Infrastructure Milestone
-
-Milestone 1:
-Stable Ubuntu + CUDA + PX4 SITL.
-
-No RL before lab stability.
-
----
-
-## 8. Year 1 Success Criteria
-
-Minimum outcomes:
-- Reproducible RL pipeline
-- 1 conference-level paper draft
-- Deep understanding of PPO / SAC / TD3
-- Domain randomization experiments
-- Attempted sim-to-real
-- Clean GitHub repo with documentation
-
----
-
-## 9. Weekly Update Template
-
-Week X
-
-Progress:
--
-
-Hypothesis:
--
-
-Metric:
--
-
-Baseline:
--
-
-Isolated variable:
--
-
-Failure definition:
--
-
-Lessons:
--
-
-Next focus:
--
-
----
-
-## 10. Operating Principles
-
-1. Infrastructure before ambition
-2. Measurement before iteration
-3. Isolation before complexity
-4. Reproducibility before novelty
-5. Discipline before motivation
-
-## Python Environment Discipline
-
-All research-related Python dependencies must be installed inside a virtual environment (venv).
-
-System Python must remain clean.
+All research-related Python work must be performed inside a virtual environment.
 
 Rules:
 
 - Never install research packages globally.
 - Always activate venv before running experiments.
-- Rebuild venv if dependency conflicts occur.
-- Log major dependency changes.
-- Maintain reproducibility via requirements.txt or pyproject.toml.
+- Freeze dependencies after major updates.
+- Rebuild venv instead of polluting system Python.
 
-Activation command:
+Activation:
 
     cd ~/rl_lab
     source venv/bin/activate
@@ -185,4 +92,60 @@ Deactivation:
 
     deactivate
 
-The virtual environment is part of research reproducibility.
+Reproducibility is mandatory.
+
+---
+
+## 5. Intellectual Boundaries
+
+The following topics are restricted due to employer overlap:
+
+- Interception systems
+- Classified navigation components
+- Proprietary system architectures
+
+Independent work must be:
+
+- Clean-room implemented
+- Publicly publishable
+- Legally and ethically safe
+
+---
+
+## 6. Infrastructure Status
+
+GPU: RTX 3070 Ti Laptop  
+Driver: 590.x  
+CUDA: 13.1  
+PyTorch: cu121 build  
+Virtual environment: Active and isolated  
+tmux: Configured  
+SSH GitHub: Active  
+
+Lab status: Operational.
+
+---
+
+## 7. Operating Principles
+
+1. Infrastructure before ambition
+2. Measurement before iteration
+3. Isolation before complexity
+4. Reproducibility before novelty
+5. Discipline before motivation
+6. Stop at clean milestones
+
+---
+
+## 8. Weekly Review Protocol
+
+Every week:
+
+- Log progress
+- Log failures
+- Log lessons
+- Define next week’s 3 tasks only
+- Avoid scope creep
+
+This is a long-term research arc (2–5 years).
+Slow, deliberate growth.
