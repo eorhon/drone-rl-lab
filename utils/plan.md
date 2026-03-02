@@ -121,6 +121,16 @@ Explore:
 Hypothesis:
 Structured adaptation outperforms naive domain randomization.
 
+Pre-registered success criterion (before training):
+- Model A: PPO (MLP), Model B: RecurrentPPO (LSTM).
+- Controlled setup (must be identical): same tau, same training timesteps, same seeds, same reward, same evaluation protocol.
+- Only intended variable difference: memory (feedforward vs recurrent policy).
+- Metric definition per model and drift level d: D(d) = (RMSE(d) - RMSE(0)) / RMSE(0).
+- Primary adaptation metric: slope of D(d) vs drift d (robustness degradation slope).
+- Decision rule: LSTM helps if mean slope is lower than MLP and the slope difference is statistically significant across seeds (two-sided Welch t-test, alpha = 0.05, minimum 5 shared seeds).
+- Secondary report (not hard-gated): RMSE and relative improvement at each drift point, including d >= 0.20.
+- This is an offline evaluation criterion only; it does not create any runtime controller threshold.
+
 Deliverable:
 Conference-level paper draft.
 

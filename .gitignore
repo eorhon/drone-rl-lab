@@ -221,3 +221,8 @@ __pycache__/
 *.pyc
 logs/
 wandb/
+
+experiments/
+logs/
+__pycache__/
+*.pyc
