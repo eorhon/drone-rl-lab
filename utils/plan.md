@@ -143,6 +143,12 @@ Conference-level paper draft.
 - Study performance gap
 - Investigate fine-tuning
 
+### Decision Gate: RecurrentPPO viability
+
+- RecurrentPPO (LSTM) was attempted with a stabilization sweep under controlled settings.
+- If RecurrentPPO cannot learn stable hover, we will either switch to a different recurrent method or conclude MLP is preferred.
+- Recurrent preference will only be revisited if partial observability is increased for real reasons (for example delay/dropout), not artificial complexity.
+
 ---
 
 # 5. Publication Goal

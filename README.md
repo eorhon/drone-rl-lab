@@ -26,6 +26,12 @@ Infrastructure phase completed:
 
 Lab is operational.
 
+## Current Findings
+
+- Stable MLP baseline exists in the current lagged environment setup.
+- RecurrentPPO (LSTM) currently fails to train stable hover behavior; investigation is ongoing.
+- Environment was stabilized by replacing altitude clipping with bound-based termination and terminal penalty.
+
 ---
 
 ## Research Direction
